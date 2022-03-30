@@ -21,9 +21,40 @@ public class Main {
         mentoria.setData(LocalDate.now());
 
 
-        System.out.println(curso1);
+        /*System.out.println(curso1);
         System.out.println(curso2);
-        System.out.println(mentoria);
+        System.out.println(mentoria);*/
+
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java Developer");
+        bootcamp.setDescricao("Descrição bootcampo Java Developer");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria);
+
+        Dev devBbraitiner = new Dev();
+        devBbraitiner.setNome("Braitiner");
+        devBbraitiner.inscreverBootcamp(bootcamp);
+        System.out.println("Conteudos incritos Braitiner: " + devBbraitiner.getConteudosInscritos());
+        devBbraitiner.progredir();
+        devBbraitiner.progredir();
+        devBbraitiner.progredir();
+        System.out.println("Conteudos incritos Braitiner: " + devBbraitiner.getConteudosInscritos());
+        System.out.println("Condeudos concluidos Braitiner: " + devBbraitiner.getConteudosConluidos());
+        System.out.println("XP: " + devBbraitiner.calcularTotalXp());
+
+        Dev devCamila = new Dev();
+        devCamila.setNome("camila");
+        devCamila.inscreverBootcamp(bootcamp);
+        System.out.println("Condeudos incritos Camila: " + devCamila.getConteudosInscritos());
+        devCamila.progredir();
+        System.out.println("Condeudos incritos Camila: " + devCamila.getConteudosInscritos());
+        System.out.println("Condeudos concluidos Camila: " + devCamila.getConteudosConluidos());
+        System.out.println("XP: " + devCamila.calcularTotalXp());
+
+
+
+
 
 
 
